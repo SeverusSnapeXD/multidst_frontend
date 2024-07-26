@@ -31,3 +31,25 @@
     text-wrap: balance;
   }
 } */
+
+.gradient {
+  background: rgb(86,55,167);
+  background: linear-gradient(135deg, rgba(86,55,167,1) 0%, rgba(156,110,224,1) 51%, rgba(19,238,240,1) 100%);
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+  to {
+    opacity: 100;
+    scale: 1;
+  }
+}
+
+.reveal {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}

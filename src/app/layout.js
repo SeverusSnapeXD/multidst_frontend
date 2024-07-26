@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,12 +12,13 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className="!scroll-smooth">
       <body className={inter.className}>
         <Navbar />
-        <div className="py-4 px-[10%] bg-gray-100">
+        <div className="bg-[url('/bg.jpg')] gradient flex flex-col bg-cover bg-center py-4 px-[10%] bg-gray-100 bg-fixed min-h-screen">
         {children}
         </div>
+        <Footer />
         </body>
     </html>
   );

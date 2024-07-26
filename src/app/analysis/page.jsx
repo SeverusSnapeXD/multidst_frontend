@@ -1,7 +1,7 @@
 import Button from "@/components/Button";
 
 function Title({ children }) {
-    return <h5 className="font-semibold text-sm mb-2">{children}</h5>
+    return <h5 className="font-semibold text-xl mb-2">{children}</h5>
 }
 
 const list = ["Bonferroni Correction","Holm-Bonferroni Correction","Benjamini-Hochberg Procedure","Benjamini-Yekutieli Method",
@@ -11,10 +11,10 @@ const list = ["Bonferroni Correction","Holm-Bonferroni Correction","Benjamini-Ho
 
 export default function page() {
     return (
-        <div className="h-screen">
-            <h1 className="text-xl font-bold mb-1">Analysis</h1>
-            <p className="text-sm font-medium">Please enter (copy-paste) your p-values into the allotted space and select the relevant correction method(s). For more information, please refer to our paper.</p>
-                <div className="flex justify-between mt-3">
+        <div className="h-screen text-white">
+            <h1 className="text-3xl md:text-4xl font-bold mb-1">Analysis</h1>
+            <p className="text-sm">Please enter (copy-paste) your p-values into the allotted space and select the relevant correction method(s). For more information, please refer to our paper.</p>
+                <div className="flex justify-between mt-8">
                     <div class="w-1/4">
                         <Title>
                             Step 1: Enter list of p-values:

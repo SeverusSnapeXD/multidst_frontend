@@ -33,8 +33,12 @@
 } */
 
 .gradient {
-  background: rgb(86,55,167);
-  background: linear-gradient(135deg, rgba(86,55,167,1) 0%, rgba(156,110,224,1) 51%, rgba(19,238,240,1) 100%);
+  background: rgb(153, 123, 229);
+  background: linear-gradient(135deg, rgb(144, 112, 226) 0%, rgba(156,110,224,1) 51%, rgb(28, 178, 180) 100%);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 @keyframes appear {
@@ -48,8 +52,42 @@
   }
 }
 
+@keyframes slidefromleft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px) scale(0.8);
+  }
+  to {
+    opacity: 100;
+    translate: translateX(0px) scale(1);
+  }
+}
+
+@keyframes slidefromright {
+  from {
+    opacity: 0;
+    transform: translateX(30px) scale(0.8);
+  }
+  to {
+    opacity: 100;
+    translate: translateX(0px) scale(1);
+  }
+}
+
 .reveal {
   animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+
+.slider-left {
+  animation: slidefromleft linear 1s;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+
+.slider-right {
+  animation: slidefromright linear 1s;
   animation-timeline: view();
   animation-range: entry 0% cover 30%;
 }

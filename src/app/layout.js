@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className="!scroll-smooth">
       <body className={inter.className}>
         <Navbar />
-        <div className="bg-[url('/bg.jpg')] gradient flex flex-col bg-cover bg-center py-4 px-[10%] bg-gray-100 bg-fixed min-h-screen">
+        <div className="gradient flex flex-col bg-cover bg-center py-4 px-[10%] bg-fixed min-h-screen">
         {children}
         </div>
         <Footer />

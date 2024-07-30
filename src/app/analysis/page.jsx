@@ -15,7 +15,7 @@ export default function page() {
             <h1 className="text-3xl md:text-4xl font-bold mb-1">Analysis</h1>
             <p className="text-sm">Please enter (copy-paste) your p-values into the allotted space and select the relevant correction method(s). For more information, please refer to our paper.</p>
                 <div className="flex justify-between mt-8">
-                    <div class="w-1/4">
+                    <div className="w-1/4">
                         <Title>
                             Step 1: Enter list of p-values:
                         </Title>
@@ -27,7 +27,7 @@ export default function page() {
                     </div>
 
                     {/* STEP 2 */}
-                    <div class="w-2/4 px-6">
+                    <div className="w-2/4 px-6">
                         <Title>
                             Step 2: Compute following tests:
                         </Title>
@@ -39,55 +39,55 @@ export default function page() {
                     </div>
 
                     {/* step 3 */}
-                    <div class="w-1/4">
+                    <div className="w-1/4">
                         <Title>
                             Results
                         </Title>
-                        <div class="col mt-6">
+                        <div className="col mt-6">
                             <Title>
                                 Bonferroni Correction
                             </Title>
-                            <div class="mb-3">
+                            <div className="mb-3">
                                 <textarea className="p-2" rows="1"></textarea>
                             </div>
                         </div>
-                        <div class="col mt-3">
+                        <div className="col mt-3">
                             <Title>
                                 Holm-Bonferroni Correction
                             </Title>
-                            <div class="mb-3">
+                            <div className="mb-3">
                                 <textarea className="p-2" rows="1"></textarea>
                             </div>
                         </div>
-                        <div class="col mt-3">
+                        <div className="col mt-3">
                             <Title>
                                 Benjamini-Hochberg Procedure
                             </Title>
-                            <div class="mb-3">
+                            <div className="mb-3">
                                 <textarea className="p-2" rows="1"></textarea>
                             </div>
                         </div>
-                        <div class="col mt-3">
+                        <div className="col mt-3">
                             <Title>
                                 Benjamini-Yekutieli Method
                             </Title>
-                            <div class="mb-3">
+                            <div className="mb-3">
                                 <textarea className="p-2" rows="1"></textarea>
                             </div>
                         </div>
-                        <div class="col mt-3">
+                        <div className="col mt-3">
                             <Title>
                                 Storey’s Q Value
                             </Title>
-                            <div class="mb-3">
+                            <div className="mb-3">
                                 <textarea className="p-2" rows="1"></textarea>
                             </div>
                         </div>
-                        <div class="col mt-3">
+                        <div className="col mt-3">
                             <Title>
                                 SGoF Test
                             </Title>
-                            <div class="mb-3">
+                            <div className="mb-3">
                                 <textarea className="p-2" rows="1"></textarea>
                             </div>
                         </div>

@@ -73,7 +73,7 @@ function Tile({title, body, reverse = false}) {
 }
 
 
-export default function page() {
+export default function About() {
   return (
     <div className='text-white'>
         {

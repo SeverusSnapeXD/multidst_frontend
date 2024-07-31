@@ -6,7 +6,7 @@ function Name({children}){
     )
 }
 
-export default function page() {
+export default function Contact() {
   return (
     <div className='text-white'>
         <h1 className='text-4xl font-semibold'>Our Team</h1>

@@ -19,7 +19,7 @@ const list = ["Bonferroni Correction","Holm-Bonferroni Correction","Benjamini-Ho
 ]
 
 
-export default function page() {
+export default function Analysis() {
 
     const [data, setData] = useState([]);
     const [textArea, setTextArea] = useState([]);

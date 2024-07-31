@@ -33,9 +33,9 @@ export default function Home() {
       <div className="flex flex-col items-center w-full h-screen justify-center">
         <div className="mb-10 md:mb-20">
         <h1 className="text-7xl md:text-8xl lg:text-9xl font-semibold text-white font-serif">MultiDST</h1>
-        <p className="text-slate-50 font-semibold text-center">Empowering Data-Driven Decisions</p>
+        <p className="text-slate-50 font-semibold text-center">Multiple testing made easy</p>
         </div>
-        <p className="text-center md:w-[70%] text-slate-50 font-medium text-lg my-10">
+        <p className="text-center md:w-[70%] text-slate-50 font-light text-lg my-10">
         A tool designed for multiple hypothesis testing in statistical analysis. It provides implementations of various methods to control the family-wise error rate (FWER) and false discovery rate (FDR) in scenarios involving multiple hypothesis tests. Significant Index Plot (SIP) can be used to visualize the significant hypotheses under each of the method with ease.
         </p>
         <Link href={'/analysis'}>

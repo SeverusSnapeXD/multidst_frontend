@@ -43,6 +43,12 @@
   background-position: center;
 }
 
+.gradient-text {
+  background: linear-gradient(135deg, rgb(52, 26, 120) 0%, rgb(43, 43, 113) 51%, rgb(17, 115, 115) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 @keyframes appear {
   from {
     opacity: 0;

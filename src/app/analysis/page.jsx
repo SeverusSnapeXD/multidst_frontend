@@ -86,7 +86,9 @@ export default function Analysis() {
         <div className="h-full text-white">
             <h1 className="text-3xl md:text-4xl font-bold mb-1">Analysis</h1>
            
-            <p className="text-sm">Please enter (copy-paste) your p-values into the allotted space and select the relevant correction method(s). For more information, please refer to our paper.</p>
+            <p className="text-sm">
+                Please enter (copy-paste) your p-values into the allotted space and select a suitable threshold. Then, click "Analyze" to obtain the lists of significant p-values under each of the 6 methods, along with the historgram and the significant index plot (SIP).
+                </p>
                 <div className="flex justify-between my-10 gap-10">
 
                     {/* step 1 */}
@@ -111,7 +113,7 @@ export default function Analysis() {
                                 setResults(null);
                             }}
                             />
-                            <Button label={'Load Sample Data'} className="w-full" onClick={loadSampleData} />
+                            {/* <Button label={'Load Sample Data'} className="w-full" onClick={loadSampleData} /> */}
                             <FileReader onFileUpload={handleFile} />
                         </div>
                     </div>

@@ -74,6 +74,14 @@ export default function Analysis() {
     }
    }
 
+   function copyText(item){
+    if(results?.[item]){
+        console.log("copy ",results?.[item])
+        navigator.clipboard.writeText(Array(results?.[item]).join(","));
+        alert("Copied to clipboard");
+    }
+   }
+
     return (
         <div className="h-full text-white">
             <h1 className="text-3xl md:text-4xl font-bold mb-1">Analysis</h1>
@@ -100,6 +108,7 @@ export default function Analysis() {
                             onClick={() => {
                                 setData([])
                                 setTextArea([])
+                                setResults(null);
                             }}
                             />
                             <Button label={'Load Sample Data'} className="w-full" onClick={loadSampleData} />
@@ -180,50 +189,121 @@ export default function Analysis() {
                             <Title>
                                 Bonferroni Correction
                             </Title>
-                            <div className="mb-3">
-                                <textarea className="p-2" readOnly value={results?.Bonferroni} rows="1"></textarea>
+                            <div className="mb-3 text-black flex gap-4 ">
+                                <textarea className="p-2 min-w-5" readOnly value={results?.Bonferroni} rows="1"></textarea>
+                                <div 
+                                onClick={() => copyText("Bonferroni")}
+                                className="text-xs 
+                                bg-slate-500 
+                                max-h-10
+                                flex items-center justify-center
+                                text-white text-center rounded hover:cursor-copy">
+                                <p>Copy to clipboard</p>
+                                </div>
                             </div>
                         </div>
                         <div className="col mt-3">
                             <Title>
                                 Holm-Bonferroni Correction
                             </Title>
-                            <div className="mb-3">
+                            <div className="mb-3 text-black flex gap-4 ">
+                                <textarea className="p-2 min-w-5" readOnly value={results?.Holm} rows="1"></textarea>
+                                <div 
+                                onClick={() => copyText("Holm")}
+                                className="text-xs 
+                                bg-slate-500 
+                                max-h-10
+                                flex items-center justify-center
+                                text-white text-center rounded hover:cursor-copy">
+                                <p>Copy to clipboard</p>
+                                </div>
+                            </div>
+                            {/* <div className="mb-3">
                                 <textarea className="p-2" readOnly value={results?.Holm} rows="1"></textarea>
+                            </div> */}
+                        </div>
+                        <div className="col mt-3">
+                            <Title>
+                                SGoF Test
+                            </Title>
+                            {/* <div className="mb-3">
+                                <textarea className="p-2" readOnly value={results?.SGoF} rows="1"></textarea>
+                            </div> */}
+                            <div className="mb-3 text-black flex gap-4 ">
+                                <textarea className="p-2 min-w-5" readOnly value={results?.SGoF} rows="1"></textarea>
+                                <div 
+                                onClick={() => copyText("SGoF")}
+                                className="text-xs 
+                                bg-slate-500 
+                                max-h-10
+                                flex items-center justify-center
+                                text-white text-center rounded hover:cursor-copy">
+                                <p>Copy to clipboard</p>
+                                </div>
                             </div>
                         </div>
                         <div className="col mt-3">
                             <Title>
                                 Benjamini-Hochberg Procedure
                             </Title>
-                            <div className="mb-3">
+                            {/* <div className="mb-3">
                                 <textarea className="p-2" readOnly value={results?.BH} rows="1"></textarea>
+                            </div> */}
+                             <div className="mb-3 text-black flex gap-4 ">
+                                <textarea className="p-2 min-w-5" readOnly value={results?.BH} rows="1"></textarea>
+                                <div 
+                                onClick={() => copyText("BH")}
+                                className="text-xs 
+                                bg-slate-500 
+                                max-h-10
+                                flex items-center justify-center
+                                text-white text-center rounded hover:cursor-copy">
+                                <p>Copy to clipboard</p>
+                                </div>
                             </div>
+                            
                         </div>
                         <div className="col mt-3">
                             <Title>
                                 Benjamini-Yekutieli Method
                             </Title>
-                            <div className="mb-3">
+                            {/* <div className="mb-3">
                                 <textarea className="p-2" readOnly value={results?.BY} rows="1"></textarea>
+                            </div> */}
+                            <div className="mb-3 text-black flex gap-4 ">
+                                <textarea className="p-2 min-w-5" readOnly value={results?.BY} rows="1"></textarea>
+                                <div 
+                                onClick={() => copyText("BY")}
+                                className="text-xs 
+                                bg-slate-500 
+                                max-h-10
+                                flex items-center justify-center
+                                text-white text-center rounded hover:cursor-copy">
+                                <p>Copy to clipboard</p>
+                                </div>
                             </div>
                         </div>
                         <div className="col mt-3">
                             <Title>
                                 Storey’s Q Value
                             </Title>
-                            <div className="mb-3">
+                            {/* <div className="mb-3">
                                 <textarea className="p-2" readOnly value={results?.['Q-value']} rows="1"></textarea>
+                            </div> */}
+                            <div className="mb-3 text-black flex gap-4 ">
+                                <textarea className="p-2 min-w-5" readOnly value={results?.['Q-value']} rows="1"></textarea>
+                                <div 
+                                onClick={() => copyText("Q-value")}
+                                className="text-xs 
+                                bg-slate-500 
+                                flex items-center justify-center
+                                max-h-10
+                                text-white text-center rounded hover:cursor-copy">
+                                <p>Copy to clipboard</p>
+                                </div>
                             </div>
                         </div>
-                        <div className="col mt-3">
-                            <Title>
-                                SGoF Test
-                            </Title>
-                            <div className="mb-3">
-                                <textarea className="p-2" readOnly value={results?.SGoF} rows="1"></textarea>
-                            </div>
-                        </div>
+                        
                         </div>
                         {/* Image */}
                         <div className="w-full items-center justify-center flex">

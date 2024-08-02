@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
+import { Name } from '../contact/page'
 
 const data = [
     {
@@ -76,6 +77,41 @@ function Tile({title, body, reverse = false}) {
 export default function About() {
   return (
     <div className='text-white'>
+
+        <div className='mt-8'>
+        <Header>Our Team</Header>
+        <div className='font-medium text-slate-50 flex flex-col gap-y-1 mt-2 text-lg'>
+            <p>
+            Susara Ouchithya
+            </p>
+            <p>
+            Sahan Madhushanka
+            </p>
+            <p>
+            Kaleelur Rahman
+            </p>
+        </div>
+        <div>
+            <p className='text-3xl font-medium mt-8'>Supervised By:</p>
+            <div className='font-medium text-slate-50 flex flex-col gap-y-1 mt-4 text-lg'>
+
+            <p>
+
+            Dr. Nilmini Hettiarachchi
+Tokyo Metropolitan Institute of Medical Science, Japan    
+</p>
+<p>
+Dr. Dilhari Attygalle
+University of Colombo, Department of Statistics, Sri Lanka 
+</p>
+<p>
+Dr. Gayan Dharmarathne
+University of Colombo, Department of Statistics, Sri Lanka
+            </p>
+            </div>
+        </div>
+        </div>
+
         {
             data.map((item, index) => <Tile title={item.title} body={item.body} key={index} reverse={index % 2} />)
         }

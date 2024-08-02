@@ -55,8 +55,9 @@ export default function Analysis() {
    const analyseData = async () => {
     try {
         if(selectedValue === "") return alert("Alpha value is required");
+        let p_valuesData = data.length > 0 ? data.toString() : textArea;
         const body = {
-            p_values: data.toString(),
+            p_values: p_valuesData,
             alpha: selectedValue
         }
         // console.log('body ',body);
@@ -85,12 +86,14 @@ export default function Analysis() {
                         <Title>
                             Step 1: Enter list of p-values:
                         </Title>
+
                         <textarea onChange={e => {
                             setTextArea(e.target.value)
                         }} placeholder="Type your comma-separated p-values here..." 
                          className="w-full border-2 p-2 mt-4 text-sm font-mono text-black" 
                          rows="15" 
                          value={textArea} />
+
                         <div>
                             <Button label={'Reset'} 
                             className="w-full mb-2 bg-transparent border border-1 border-white" 

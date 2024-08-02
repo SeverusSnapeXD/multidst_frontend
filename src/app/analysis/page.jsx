@@ -5,10 +5,15 @@ import FileReader from "./FileReader";
 import { useState } from "react";
 import Image from "next/image";
 import axios from "axios";
+import { useCSVReader , usePapaParse } from "react-papaparse";
 
 const baseURL = "http://127.0.0.1:8000"
 
 const apiClient = axios.create({baseURL});
+
+function getImageUrl(fileName){
+    return `${baseURL}/images/${fileName}.png`;
+}
 
 function Title({ children }) {
     return <h5 className="font-semibold text-sm mb-2">{children}</h5>
@@ -24,6 +29,9 @@ export default function Analysis() {
     const [data, setData] = useState([]);
     const [textArea, setTextArea] = useState([]);
     const [selectedValue, setSelectedValue] = useState('');
+    const [results, setResults] = useState(null);
+
+    const {readString} = usePapaParse()
 
     const handleChange = (event) => {
         setSelectedValue(event.target.value);
@@ -39,6 +47,11 @@ export default function Analysis() {
         setTextArea(text);
    }
 
+   const loadSampleData = () => {
+    readString()
+
+   }
+
    const analyseData = async () => {
     try {
         if(selectedValue === "") return alert("Alpha value is required");
@@ -49,8 +62,14 @@ export default function Analysis() {
         // console.log('body ',body);
         const response = await apiClient.post("/analyze",body)
         console.log('response ', response.data);
+        if(response.data){
+            setResults(response.data);
+        }else{
+            setResults(null);
+        }
     } catch (error) {
         console.log('eror analyse ',error)
+        alert("Something went wrong");
     }
    }
 
@@ -80,7 +99,7 @@ export default function Analysis() {
                                 setTextArea([])
                             }}
                             />
-                            <Button label={'Load Sample Data'} className="w-full" />
+                            <Button label={'Load Sample Data'} className="w-full" onClick={loadSampleData} />
                             <FileReader onFileUpload={handleFile} />
                         </div>
                     </div>
@@ -136,9 +155,12 @@ export default function Analysis() {
                         </div>
                         <Button label={'Analyze'} onClick={analyseData} className="w-full my-10" />
                         <div className="flex-1 justify-center items-center">
-            <Image src="/gene.jpg" alt="Gene Image" layout="responsive" width={300} height={130} 
+                            {
+                                results?.hist &&
+            <Image src={getImageUrl(results.hist)} alt="Gene Image" layout="responsive" width={300} height={130} 
                 className="w-full h-auto max-h-64 rounded-md" 
                 />
+                            }
                     </div>
                     </div>
 
@@ -156,7 +178,7 @@ export default function Analysis() {
                                 Bonferroni Correction
                             </Title>
                             <div className="mb-3">
-                                <textarea className="p-2" rows="1"></textarea>
+                                <textarea className="p-2" readOnly value={results?.Bonferroni} rows="1"></textarea>
                             </div>
                         </div>
                         <div className="col mt-3">
@@ -164,7 +186,7 @@ export default function Analysis() {
                                 Holm-Bonferroni Correction
                             </Title>
                             <div className="mb-3">
-                                <textarea className="p-2" rows="1"></textarea>
+                                <textarea className="p-2" readOnly value={results?.Holm} rows="1"></textarea>
                             </div>
                         </div>
                         <div className="col mt-3">
@@ -172,7 +194,7 @@ export default function Analysis() {
                                 Benjamini-Hochberg Procedure
                             </Title>
                             <div className="mb-3">
-                                <textarea className="p-2" rows="1"></textarea>
+                                <textarea className="p-2" readOnly value={results?.BH} rows="1"></textarea>
                             </div>
                         </div>
                         <div className="col mt-3">
@@ -180,7 +202,7 @@ export default function Analysis() {
                                 Benjamini-Yekutieli Method
                             </Title>
                             <div className="mb-3">
-                                <textarea className="p-2" rows="1"></textarea>
+                                <textarea className="p-2" readOnly value={results?.BY} rows="1"></textarea>
                             </div>
                         </div>
                         <div className="col mt-3">
@@ -188,7 +210,7 @@ export default function Analysis() {
                                 Storey’s Q Value
                             </Title>
                             <div className="mb-3">
-                                <textarea className="p-2" rows="1"></textarea>
+                                <textarea className="p-2" readOnly value={results?.['Q-value']} rows="1"></textarea>
                             </div>
                         </div>
                         <div className="col mt-3">
@@ -196,7 +218,7 @@ export default function Analysis() {
                                 SGoF Test
                             </Title>
                             <div className="mb-3">
-                                <textarea className="p-2" rows="1"></textarea>
+                                <textarea className="p-2" readOnly value={results?.SGoF} rows="1"></textarea>
                             </div>
                         </div>
                         </div>
@@ -204,9 +226,12 @@ export default function Analysis() {
                         <div className="w-full items-center justify-center flex">
 
                             <div className="flex-1 justify-center items-center">
-            <Image src={`${baseURL}/images/hist1722451354082672`} alt="Gene Image" layout="responsive" width={300} height={150} 
-                className="w-full h-auto max-h-64 rounded-md" 
-                />
+                                {
+                                    results?.sigindexplot &&
+            <Image src={getImageUrl(results?.sigindexplot)} alt="Gene Image" layout="responsive" width={300} height={150} 
+            className="w-full h-auto max-h-64 rounded-md" 
+            />
+        }
                 </div>
           </div>
           </div>

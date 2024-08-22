@@ -87,7 +87,7 @@ export default function Analysis() {
             <h1 className="text-3xl md:text-4xl font-bold mb-1">Analysis</h1>
            
             <p className="text-sm">
-                Please enter (copy-paste) your p-values into the allotted space and select a suitable threshold. Then, click "Analyze" to obtain the lists of significant p-values under each of the 6 methods, along with the histogram and the significant index plot (SIP).
+                Please enter (copy-paste) your p-values into the allotted space and select a suitable threshold. Then, click "Analyze" to obtain the lists of significant p-values under each of the 6 methods, along with the histogram and the Significant Index Plot (SIP).
                 </p>
                 <div className="flex justify-between my-10 gap-10">
 

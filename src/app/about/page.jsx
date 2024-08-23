@@ -141,7 +141,7 @@ Introducing MultiDST, a groundbreaking solution designed to enhance and unify ex
 
 ### Uniqueness
 
-MultiDST stands out as the first platform to systematically compare six correction methods—Bonferroni, Holm, SGoF, Benjamini-Hochberg, Benjamini-Yekutieli, and Storey’s Q value—accessible through an intuitive interface. We introduce the Significant Index Plot (SIP), an innovative visualization tool that aids researchers in detecting significant hypotheses across these correction procedures. The SIP provides a clear representation of significant hypotheses under each method, simplifying interpretation and comparison of results. Additionally, our hybrid technique sequentially tests and removes hypotheses, allowing seamless navigation between FWER and FDR methods, ensuring optimal results across diverse data scenarios, including Independent Hypotheses Weighting (IHW) situations.
+MultiDST stands out as the first platform to systematically compare six correction methods—Bonferroni, Holm, SGoF, Benjamini-Hochberg, Benjamini-Yekutieli, and Storey’s Q value—accessible through an intuitive interface. We introduce the Significant Index Plot (SIP), an innovative visualization tool that aids researchers in detecting significant hypotheses across these correction procedures. The SIP provides a clear representation of significant hypotheses under each method, simplifying interpretation and comparison of results. Additionally, our hybrid technique sequentially tests and removes hypotheses, allowing seamless navigation between FWER and FDR methods, and ensuring optimal results across diverse data scenarios, including Independent Hypotheses Weighting (IHW) situations.
 
 ### Functionality and Features
 

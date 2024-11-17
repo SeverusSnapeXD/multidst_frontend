@@ -6,6 +6,7 @@ import { useState } from "react";
 import Image from "next/image";
 import axios from "axios";
 import { useCSVReader , usePapaParse } from "react-papaparse";
+import Table from "./Table";
 
 const baseURL = "http://127.0.0.1:8000"
 
@@ -30,6 +31,8 @@ export default function Analysis() {
     const [textArea, setTextArea] = useState([]);
     const [selectedValue, setSelectedValue] = useState('');
     const [results, setResults] = useState(null);
+    const [titles, setTitles] = useState(null);
+    const [originalPValues, setOriginalPValues] = useState(null);
 
     const {readString} = usePapaParse()
 
@@ -39,12 +42,25 @@ export default function Analysis() {
 
    const handleFile = file => {
         let arr = [];
-        file.data?.map(item => {
-            arr.push(item[0]);
-        });
+        let titleArr = [];
+        
+        for(let i = 1; i < file.data.length; i++) {
+            const row = file.data[i];
+            if (row.length <= 1) continue;
+            
+            if (row.length >= 3) {
+                titleArr.push(row[1]);
+                arr.push(row[2]);
+            }
+            else if (row.length === 2) {
+                arr.push(row[1]);
+            }
+        }
+        
         let text = arr.join(',\n');
         setData(arr);
         setTextArea(text);
+        setTitles(titleArr.length > 0 ? titleArr : null);
    }
 
    const loadSampleData = () => {
@@ -56,6 +72,7 @@ export default function Analysis() {
     try {
         if(selectedValue === "") return alert("Alpha value is required");
         let p_valuesData = data.length > 0 ? data.toString() : textArea;
+        setOriginalPValues(p_valuesData);
         const body = {
             p_values: p_valuesData,
             alpha: selectedValue
@@ -80,6 +97,21 @@ export default function Analysis() {
         navigator.clipboard.writeText(Array(results?.[item]).join(","));
         alert("Copied to clipboard");
     }
+   }
+
+   const resetAll = () => {
+    setData([]);
+    setTextArea([]);
+    setResults(null);
+    setOriginalPValues(null);
+    setTitles(null);
+    setSelectedValue('');
+
+    // Clear all textareas in results section
+    const textareas = document.querySelectorAll('textarea');
+    textareas.forEach(textarea => {
+        textarea.value = '';
+    });
    }
 
     return (
@@ -107,11 +139,7 @@ export default function Analysis() {
                         <div>
                             <Button label={'Reset'} 
                             className="w-full mb-2 bg-transparent border border-1 border-white" 
-                            onClick={() => {
-                                setData([])
-                                setTextArea([])
-                                setResults(null);
-                            }}
+                            onClick={resetAll}
                             />
                             {/* <Button label={'Load Sample Data'} className="w-full" onClick={loadSampleData} /> */}
                             <FileReader onFileUpload={handleFile} />
@@ -321,6 +349,16 @@ export default function Analysis() {
           </div>
           </div>
                     </div>
+
+                    {
+                        results?.top10indices && results?.top10methods &&
+                        <Table 
+                        originalPValues={originalPValues}
+                        pValues={results?.top10indices} 
+                        detectedBy={results?.top10methods}
+                        titles={titles}
+                        />
+                    }
         </div>
     )
 }

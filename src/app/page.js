@@ -36,7 +36,7 @@ const methods = [
 
 const testimonials = [
   {
-    imageSrc: "/gene.jpg",
+    imageSrc: "/susara.jpeg",
     text: "This tool is a game changer for our research. It's so easy to use and the results are clear and easy to understand.",
     name: "Dr. Susara Ouchithya",
     role: "Professor of Statistics"

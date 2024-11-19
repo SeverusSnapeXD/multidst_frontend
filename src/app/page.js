@@ -36,28 +36,28 @@ const methods = [
 
 const testimonials = [
   {
-    imageSrc: "/susara.jpeg",
-    text: "This tool is a game changer for our research. It's so easy to use and the results are clear and easy to understand.",
-    name: "Dr. Susara Ouchithya",
-    role: "Professor of Statistics"
+    imageSrc: "/gene.jpg",
+    text: "MultiDST is a sure method of getting statistically significant results and has proven to be very useful for multiple testing specially in large scale biomedical data.",
+    name: "Dr. Nilmini Hettiarachchi",
+    role: "Senior Scientist"
   },
   {
     imageSrc: "/gene.jpg",
-    text: "The visualization features have made it much easier to communicate our findings to non-technical stakeholders.",
-    name: "Dr. Sahan Madhushanka",
-    role: "Research Director"
+    text: "A very beneficial new method for scientists dealing with gene expression data to narrow down true significant results based on the dataset.",
+    name: "Dr. Isaac Adeyemi Babarinde",
+    role: "Senior Research associate"
   },
   {
-    imageSrc: "/gene.jpg",
+    imageSrc: "/temp1.jpg",
     text: "MultiDST has significantly reduced the time we spend on multiple testing analysis. A must-have tool for any research team.",
-    name: "Dr. Daniel San",
-    role: "Senior Researcher"
+    name: "<placeholder>",
+    role: "<placeholder designation>"
   },
   {
-    imageSrc: "/gene.jpg",
+    imageSrc: "/temp1.jpg",
     text: "MultiDST has significantly reduced the time we spend on multiple testing analysis. A must-have tool for any research team.",
-    name: "Dr. Michael Chen",
-    role: "Senior Researcher"
+    name: "<placeholder>",
+    role: "<placeholder designation>"
   }
 ];
 

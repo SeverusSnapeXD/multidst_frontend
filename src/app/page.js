@@ -1,3 +1,4 @@
+import Testimonial from "@/components/Testimonial";
 import Link from "next/link";
 
 const methods = [
@@ -33,6 +34,33 @@ const methods = [
   },
 ]
 
+const testimonials = [
+  {
+    imageSrc: "/gene.jpg",
+    text: "This tool is a game changer for our research. It's so easy to use and the results are clear and easy to understand.",
+    name: "Dr. Susara Ouchithya",
+    role: "Professor of Statistics"
+  },
+  {
+    imageSrc: "/gene.jpg",
+    text: "The visualization features have made it much easier to communicate our findings to non-technical stakeholders.",
+    name: "Dr. Sahan Madhushanka",
+    role: "Research Director"
+  },
+  {
+    imageSrc: "/gene.jpg",
+    text: "MultiDST has significantly reduced the time we spend on multiple testing analysis. A must-have tool for any research team.",
+    name: "Dr. Daniel San",
+    role: "Senior Researcher"
+  },
+  {
+    imageSrc: "/gene.jpg",
+    text: "MultiDST has significantly reduced the time we spend on multiple testing analysis. A must-have tool for any research team.",
+    name: "Dr. Michael Chen",
+    role: "Senior Researcher"
+  }
+];
+
 export default function Home() {
   return (
     <main className="py-2 ">
@@ -54,6 +82,21 @@ export default function Home() {
         {
           methods.map((item, i) => <Method key={i} item={item} />)
         }
+        </div>
+      </div>
+      {/* Testimonials */}
+      <div className="flex flex-col items-center justify-center my-20">
+        <p className="text-4xl text-white font-semibold mb-12 text-center">Testimonials</p>
+        
+        {/* Grid container with hidden scrollbar */}
+        <div className="w-full overflow-x-auto pb-6 px-4 scroll-smooth snap-x snap-mandatory scrollbar-hide">
+          <div className="grid grid-flow-col auto-cols-[90%] md:auto-cols-[45%] lg:auto-cols-[30%] gap-6 min-w-min mx-auto">
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="w-full snap-center">
+                <Testimonial {...testimonial} />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </main>

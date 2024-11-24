@@ -121,10 +121,10 @@ export default function Analysis() {
             <p className="text-sm">
                 Please enter (copy-paste) your p-values into the allotted space and select a suitable threshold. Then, click "Analyze" to obtain the lists of significant p-values under each of the 6 methods, along with the histogram and the Significant Index Plot (SIP).
                 </p>
-                <div className="flex justify-between my-10 gap-10">
+                <div className="md:flex lg:flex justify-between my-10 gap-10">
 
                     {/* step 1 */}
-                    <div className="w-1/2">
+                    <div className="md:w-1/2">
                         <Title>
                             Step 1: Enter list of p-values:
                         </Title>
@@ -147,7 +147,7 @@ export default function Analysis() {
                     </div>
 
                     {/* STEP 2 */}
-                    <div className="w-1/2 px-6">
+                    <div className="md:w-1/2 mt-4 md:mt-0 px-6">
                         <div className="">
                         <Title>
                             Step 2: Compute following tests:

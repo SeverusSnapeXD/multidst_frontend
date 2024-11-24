@@ -36,9 +36,9 @@ export default function FileReader({onFileUpload}) {
             <div style={styles.acceptedFile}>
               {acceptedFile && acceptedFile.name}
             </div>
-            <button {...getRemoveFileProps()} style={styles.remove}>
+            {/* <button {...getRemoveFileProps()} style={styles.remove}>
               Remove
-            </button>
+            </button> */}
           </div>
           <ProgressBar style={styles.progressBarBackgroundColor} />
         </>
@@ -104,7 +104,6 @@ const styles = {
     },
     remove: {
       height: 23,
-      position: 'absolute',
       right: 6,
       top: 6,
       width: 23,

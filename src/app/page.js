@@ -57,19 +57,19 @@ const testimonials = [
     imageSrc: "/champa-magalle.jpg",
     text: "MultiDST has significantly streamlined the analysis process of multiple testing. Its robust features and intuitive visualizations have accelerated complex statistical evaluations, delivering accurate & efficient results",
     name: "Dr. Champa Magalle",
-    role: "Senior Lecturer, Department of Statistics, University of Colombo"
+    role: "Senior Lecturer, Dept. of Statistics, University of Colombo"
   },
   {
     imageSrc: "/Nilmini-Hettiarachchi.jpg",
     text: "MultiDST is a sure method of getting statistically significant results and has proven to be very useful for multiple testing specially in large scale biomedical data.",
     name: "Dr. Nilmini Hettiarachchi",
-    role: "Senior Scientist"
+    role: "Senior Scientist, Tokyo Metropolitan University of Medical Sciences"
   },
   {
     imageSrc: "/Dr-Rasika-Jayatillake.jpg",
     text: "<<< Add a wording >>>",
     name: "Dr. Rasika Jayatillake",
-    role: "Senior Lecturer, Department of Statistics, University of Colombo"
+    role: "Senior Lecturer, Dept. of Statistics, University of Colombo"
   },
   {
     imageSrc: "/rukshala-gunaratne.jpg",

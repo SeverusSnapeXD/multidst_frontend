@@ -54,8 +54,8 @@ const testimonials = [
     role: "<placeholder designation>"
   },
   {
-    imageSrc: "/temp1.jpg",
-    text: "MultiDST is a very intuitive useful new method with applications in material physics & nano science as well.",
+    imageSrc: "/Gayan-Hettiarachchi.jpg",
+    text: "MultiDST is a useful intuitive method with applications in material physics & nano science as well.",
     name: "Associate Prof. Gayan Hettiarachchi",
     role: "Associate Professor, Tokyo International University"
   }

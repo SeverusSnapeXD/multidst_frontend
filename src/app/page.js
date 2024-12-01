@@ -55,9 +55,9 @@ const testimonials = [
   },
   {
     imageSrc: "/temp1.jpg",
-    text: "MultiDST has significantly reduced the time we spend on multiple testing analysis. A must-have tool for any research team.",
-    name: "<placeholder>",
-    role: "<placeholder designation>"
+    text: "MultiDST is a very intuitive useful new method with applications in material physics & nano science as well.",
+    name: "Associate Prof. Gayan Hettiarachchi",
+    role: "Associate Professor, Tokyo International University"
   }
 ];
 

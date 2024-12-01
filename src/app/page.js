@@ -49,7 +49,7 @@ const testimonials = [
   },
   {
     imageSrc: "/Gayan-Hettiarachchi.jpg",
-    text: "MultiDST is a very intuitive useful new method with applications in material physics & nano science as well.",
+    text: "MultiDST is a very intuitive useful new method with applications in material physics & nano science as well. It is beneficial in material discovery through high-throughput experiments.",
     name: "Associate Prof. Gayan Hettiarachchi",
     role: "Associate Professor, Tokyo International University"
   },

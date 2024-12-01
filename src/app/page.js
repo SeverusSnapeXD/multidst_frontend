@@ -36,28 +36,52 @@ const methods = [
 
 const testimonials = [
   {
-    imageSrc: "/gene.jpg",
-    text: "MultiDST is a sure method of getting statistically significant results and has proven to be very useful for multiple testing specially in large scale biomedical data.",
-    name: "Dr. Nilmini Hettiarachchi",
-    role: "Senior Scientist"
-  },
-  {
-    imageSrc: "/gene.jpg",
+    imageSrc: "/isaac-babarinde.jpg",
     text: "A very beneficial new method for scientists dealing with gene expression data to narrow down true significant results based on the dataset.",
     name: "Dr. Isaac Adeyemi Babarinde",
-    role: "Senior Research associate"
+    role: "Senior Research Associate, SUSTech University - Shenzhen China"
   },
   {
     imageSrc: "/temp1.jpg",
-    text: "MultiDST has significantly reduced the time we spend on multiple testing analysis. A must-have tool for any research team.",
-    name: "<placeholder>",
-    role: "<placeholder designation>"
+    text: "The platofrm MultiDST has greatly simplified the process of identifying significant product types and cohorts, enabling an efficient approack to decision making with large-scale policy data.",
+    name: "Ms. Fathima Ahmeer",
+    role: "AGM - Life Operations, Janashakthi Insurance PLC"
   },
   {
     imageSrc: "/Gayan-Hettiarachchi.jpg",
     text: "MultiDST is a useful intuitive method with applications in material physics & nano science as well.",
     name: "Associate Prof. Gayan Hettiarachchi",
     role: "Associate Professor, Tokyo International University"
+  },
+  {
+    imageSrc: "/champa-magalle.jpg",
+    text: "MultiDST has significantly streamlined the analysis process of multiple hypothesis testing. Its robust features and intuitive visualizations have accelerated complex statistical evaluations, delivering accurate and intuitive results",
+    name: "Dr. Champa Magalle",
+    role: "Senior Lecturer, Department of Statistics, University of Colombo"
+  },
+  {
+    imageSrc: "/Nilmini-Hettiarachchi.jpg",
+    text: "MultiDST is a sure method of getting statistically significant results and has proven to be very useful for multiple testing specially in large scale biomedical data.",
+    name: "Dr. Nilmini Hettiarachchi",
+    role: "Senior Scientist"
+  },
+  {
+    imageSrc: "/Dr-Rasika-Jayatillake.jpg",
+    text: "<<< Add a wording >>>",
+    name: "Dr. Rasika Jayatillake",
+    role: "Senior Lecturer, Department of Statistics, University of Colombo"
+  },
+  {
+    imageSrc: "/saumya.jpg",
+    text: "<<< Add a wording >>>",
+    name: "Ms. Saumya Karunadhika",
+    role: "PhD Candidate - University of Melbourne"
+  },
+  {
+    imageSrc: "/hashini-coorey.jpg",
+    text: "<<< Add a wording >>>",
+    name: "Ms. Hashini Coorey",
+    role: "PhD Candidate & Graduate Lab Assistant - Clemson University, SC USA"
   }
 ];
 
@@ -65,7 +89,7 @@ export default function Home() {
   return (
     <main className="py-2 ">
       <div className="flex flex-col items-center w-full h-screen justify-center">
-        <div className="mb-10 md:mb-20">
+        <div clScientistassName="mb-10 md:mb-20">
         <h1 className="text-7xl md:text-8xl lg:text-9xl font-semibold text-white font-serif">MultiDST</h1>
         <p className="text-slate-50 font-semibold text-center">Multiple Testing Made Easy</p>
         </div>

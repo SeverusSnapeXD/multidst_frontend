@@ -36,7 +36,7 @@ const methods = [
 
 const testimonials = [
   {
-    imageSrc: "/isaac-babarinde-3.jpg",
+    imageSrc: "/isaac-babarinde-2.jpg",
     text: "A very beneficial new method for scientists dealing with gene expression data to narrow down true significant results based on the dataset.",
     name: "Dr. Isaac Adeyemi Babarinde",
     role: "Senior Research Associate, SUSTech University - Shenzhen China"

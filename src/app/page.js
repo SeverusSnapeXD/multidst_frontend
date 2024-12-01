@@ -55,9 +55,9 @@ const testimonials = [
   },
   {
     imageSrc: "/champa-magalle.jpg",
-    text: "MultiDST has significantly streamlined the analysis process of multiple testing. Its robust features and intuitive visualizations have accelerated complex statistical evaluations, delivering accurate & efficient results",
+    text: "MultiDST has significantly streamlined the analysis process of multiple testing with robust features and intuitive visualizations, accelerating complex evaluations for accurate and efficient results.",
     name: "Dr. Champa Magalle",
-    role: "Senior Lecturer, Dept. of Statistics, University of Colombo"
+    role: "Senior Lecturer, Department of Statistics, Faculty of Science, University of Colombo"
   },
   {
     imageSrc: "/Nilmini-Hettiarachchi.jpg",
@@ -69,7 +69,7 @@ const testimonials = [
     imageSrc: "/Dr-Rasika-Jayatillake.jpg",
     text: "<<< Add a wording >>>",
     name: "Dr. Rasika Jayatillake",
-    role: "Senior Lecturer, Dept. of Statistics, University of Colombo"
+    role: "Senior Lecturer, Department of Statistics, Facultyof Science, University of Colombo"
   },
   {
     imageSrc: "/rukshala-gunaratne.jpg",

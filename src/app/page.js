@@ -42,20 +42,20 @@ const testimonials = [
     role: "Senior Research Associate, SUSTech University - Shenzhen China"
   },
   {
-    imageSrc: "/temp1.jpg",
-    text: "The platofrm MultiDST has greatly simplified the process of identifying significant product types and cohorts, enabling an efficient approack to decision making with large-scale policy data.",
+    imageSrc: "/Janashakthi_Insurance_logo.png",
+    text: "The platform MultiDST has greatly simplified the process of identifying significant product types and cohorts, enabling an efficient approack to decision making with large-scale policy data.",
     name: "Ms. Fathima Ahmeer",
     role: "AGM - Life Operations, Janashakthi Insurance PLC"
   },
   {
     imageSrc: "/Gayan-Hettiarachchi.jpg",
-    text: "MultiDST is a useful intuitive method with applications in material physics & nano science as well.",
+    text: "MultiDST is a very intuitive useful new method with applications in material physics & nano science as well.",
     name: "Associate Prof. Gayan Hettiarachchi",
     role: "Associate Professor, Tokyo International University"
   },
   {
     imageSrc: "/champa-magalle.jpg",
-    text: "MultiDST has significantly streamlined the analysis process of multiple hypothesis testing. Its robust features and intuitive visualizations have accelerated complex statistical evaluations, delivering accurate and intuitive results",
+    text: "MultiDST has significantly streamlined the analysis process of multiple testing. Its robust features and intuitive visualizations have accelerated complex statistical evaluations, delivering accurate & efficient results",
     name: "Dr. Champa Magalle",
     role: "Senior Lecturer, Department of Statistics, University of Colombo"
   },
@@ -72,9 +72,9 @@ const testimonials = [
     role: "Senior Lecturer, Department of Statistics, University of Colombo"
   },
   {
-    imageSrc: "/saumya.jpg",
+    imageSrc: "/rukshala-gunaratne.jpg",
     text: "<<< Add a wording >>>",
-    name: "Ms. Saumya Karunadhika",
+    name: "Ms. Rukshala Gunaratne",
     role: "PhD Candidate - University of Melbourne"
   },
   {

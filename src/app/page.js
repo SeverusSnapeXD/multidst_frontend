@@ -73,7 +73,7 @@ const testimonials = [
   },
   {
     imageSrc: "/hashini-coorey.jpg",
-    text: "MultiDST offers a user-friendly platform for multiple corrections featuring enhanced visualizations, making it especially useful for genetic researchers working with large complex datasets.",
+    text: "MultiDST offers a user-friendly platform for multiple corrections featuring enhanced visualizations, making it useful for genetic researchers working with complex datasets.",
     name: "Ms. Hashini Coorey",
     role: "PhD Candidate & Graduate Lab Assistant - Clemson University, SC USA"
   },

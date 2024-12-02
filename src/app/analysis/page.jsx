@@ -8,7 +8,7 @@ import axios from "axios";
 import { useCSVReader , usePapaParse } from "react-papaparse";
 import Table from "./Table";
 
-const baseURL = "http://127.0.0.1:8000"
+const baseURL = "http://192.248.16.40"
 
 const apiClient = axios.create({baseURL});
 

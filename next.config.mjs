@@ -14,6 +14,12 @@ const nextConfig = {
             port: '',
             pathname: '/images/**',
           },
+          {
+            protocol: 'https',
+            hostname: 'api.multidst.site',
+            port: '',
+            pathname: '/images/**',
+          },
         ]
       },
 };

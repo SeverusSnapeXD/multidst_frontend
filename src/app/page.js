@@ -72,16 +72,16 @@ const testimonials = [
     role: "Senior Lecturer (Statistics), University of Colombo"
   },
   {
+    imageSrc: "/hashini-coorey.jpg",
+    text: "MultiDST offers a user-friendly platform for multiple corrections featuring enhanced visualizations, making it especially useful for genetic researchers working with large complex datasets.",
+    name: "Ms. Hashini Coorey",
+    role: "PhD Candidate & Graduate Lab Assistant - Clemson University, SC USA"
+  },
+  {
     imageSrc: "/rukshala-gunaratne.jpg",
     text: "<<< Add a wording >>>",
     name: "Ms. Rukshala Gunaratne",
     role: "PhD Candidate - University of Melbourne"
-  },
-  {
-    imageSrc: "/hashini-coorey.jpg",
-    text: "<<< Add a wording >>>",
-    name: "Ms. Hashini Coorey",
-    role: "PhD Candidate & Graduate Lab Assistant - Clemson University, SC USA"
   }
 ];
 

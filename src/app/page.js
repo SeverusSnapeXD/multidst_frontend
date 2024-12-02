@@ -60,10 +60,10 @@ const testimonials = [
     role: "Senior Lecturer (Statistics), University of Colombo"
   },
   {
-    imageSrc: "/Nilmini-Hettiarachchi.jpg",
+    imageSrc: "/tharindumala.jpg",
     text: "MultiDST is a sure method of getting statistically significant results and has proven to be very useful for multiple testing specially in large scale biomedical data.",
-    name: "Dr. Nilmini Hettiarachchi",
-    role: "Senior Scientist, Tokyo Metropolitan University of Medical Sciences"
+    name: "Dr. Tharindumala Abeywardana",
+    role: "Senior Scientist, Thermo Fisher Scientific, Los Angeles USA"
   },
   {
     imageSrc: "/Dr-Rasika-Jayatillake.jpg",

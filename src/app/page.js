@@ -67,7 +67,7 @@ const testimonials = [
   },
   {
     imageSrc: "/Dr-Rasika-Jayatillake.jpg",
-    text: "<<< Add a wording >>>",
+    text: "MultiDST is an extremely useful tool for those working on identifying deferentially expressed genes. This tool brings all the different techniques under one platform to make the analysis process simple.",
     name: "Dr. Rasika Jayatillake",
     role: "Senior Lecturer (Statistics), University of Colombo"
   },
@@ -79,7 +79,7 @@ const testimonials = [
   },
   {
     imageSrc: "/rukshala-gunaratne.jpg",
-    text: "<<< Add a wording >>>",
+    text: "MultiDST has significantly reduced the time spent on multiple testing analysis. A great tool for researchers working with high-throughput medical data.",
     name: "Ms. Rukshala Gunaratne",
     role: "PhD Candidate - University of Melbourne"
   }

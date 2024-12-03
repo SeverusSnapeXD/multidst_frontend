@@ -35,6 +35,9 @@ const Navbar = () => {
                     <Link href="/about">
                         <p className={pathname === '/about' ? activeTextStyle : textStyle}>About</p>
                     </Link>
+                    <Link href="/how-it-works">
+                        <p className={pathname === '/how-it-works' ? activeTextStyle : textStyle}>How it works</p>
+                    </Link>
                     <Link href="/analysis">
                         <p className={pathname === '/analysis' ? activeTextStyle : textStyle}>Analysis</p>
                     </Link>
@@ -81,6 +84,14 @@ const Navbar = () => {
                             onClick={toggleMenu}
                         >
                             About
+                        </p>
+                    </Link>
+                    <Link href="/how-it-works">
+                        <p
+                            className={pathname === '/how-it-works' ? activeTextStyle : textStyle}
+                            onClick={toggleMenu}
+                        >
+                            How it works
                         </p>
                     </Link>
                     <Link href="/analysis">

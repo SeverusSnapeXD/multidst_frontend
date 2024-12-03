@@ -36,7 +36,7 @@ export default function Page() {
     <div className="flex flex-col items-center justify-center">
 
       {/* <div> */}
-      <div className='flex items-center justify-between bg-slate-50 bg-opacity-10 p-10 mt-20 text-white w-full'>
+      <div className='flex flex-col md:flex-row gap-4 items-center justify-between bg-slate-50 bg-opacity-10 p-10 mt-20 text-white w-full'>
         <div onClick={() => scrollToSection("video1")} className='flex-1'>
           <Thumbnail image={'/gene.jpg'} />
           <h2>Demo video title/description</h2>

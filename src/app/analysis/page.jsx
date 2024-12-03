@@ -5,7 +5,7 @@ import FileReader from "./FileReader";
 import { useState } from "react";
 import Image from "next/image";
 import axios from "axios";
-import { useCSVReader , usePapaParse } from "react-papaparse";
+import { usePapaParse } from "react-papaparse";
 import Table from "./Table";
 
 const baseURL = "https://api.multidst.site"
@@ -19,11 +19,6 @@ function getImageUrl(fileName){
 function Title({ children }) {
     return <h5 className="font-semibold text-sm mb-2">{children}</h5>
 }
-
-const list = ["Bonferroni Correction","Holm-Bonferroni Correction","Benjamini-Hochberg Procedure","Benjamini-Yekutieli Method",
-"Storey’s Q Value","SGoF Test (Sequential Goodness-of-Fit)"
-]
-
 
 export default function Analysis() {
 
@@ -39,6 +34,23 @@ export default function Analysis() {
     const handleChange = (event) => {
         setSelectedValue(event.target.value);
     };
+
+    const loadSample = async (fileName) => {
+        try {
+          const response = await fetch(`/${fileName}`);
+          const csvText = await response.text();
+    
+          readString(csvText, {
+            header: false, 
+            skipEmptyLines: true,
+            complete: (result) => {
+              handleFile(result);
+            },
+          });
+        } catch (error) {
+          console.error("Error loading sample data:", error);
+        }
+      };
 
    const handleFile = file => {
         let arr = [];
@@ -61,11 +73,6 @@ export default function Analysis() {
         setData(arr);
         setTextArea(text);
         setTitles(titleArr.length > 0 ? titleArr : null);
-   }
-
-   const loadSampleData = () => {
-    readString()
-
    }
 
    const analyseData = async () => {
@@ -141,6 +148,17 @@ export default function Analysis() {
                             className="w-full mb-2 bg-transparent border border-1 border-white" 
                             onClick={resetAll}
                             />
+                            <div className="flex items-center justify-between gap-2">
+
+                            <Button label={'Load Sample Data Set 1'} 
+                            className="w-full mb-2 bg-transparent border border-1 border-white" 
+                            onClick={() => loadSample("sample.csv")}
+                            />
+                            <Button label={'Load Sample Data Set 2'} 
+                            className="w-full mb-2 bg-transparent border border-1 border-white" 
+                            onClick={() => loadSample("sample1.csv")}
+                            />
+                            </div>
                             {/* <Button label={'Load Sample Data'} className="w-full" onClick={loadSampleData} /> */}
                             <FileReader onFileUpload={handleFile} />
                         </div>

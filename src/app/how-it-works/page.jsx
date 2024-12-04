@@ -38,7 +38,7 @@ export default function Page() {
       {/* <div> */}
       <div className='flex flex-col md:flex-row gap-4 items-center justify-between bg-slate-50 bg-opacity-10 p-10 mt-20 text-white w-full'>
         <div onClick={() => scrollToSection("video1")} className='flex-1'>
-          <Thumbnail image={'/MultiDST_Python_Thumb.png'} />
+          <Thumbnail image={'/multidst_trailer.png'} />
           <h2>Why should you choose MultiDST?</h2>
         </div>
         <div onClick={() => scrollToSection("video2")}  className='flex-1'>
@@ -62,7 +62,7 @@ export default function Page() {
 
       <div className="flex flex-col items-center justify-center my-10 w-11/12 max-w-4xl" id='video1'>
         <h2 className="text-2xl font-bold mb-4 text-white">How to use MultiDST website for simplified multiple testing</h2>
-        <EmbedVideo videoId={'OLqbyn_jqZI'} />
+        <EmbedVideo videoId={'ZIJMnMGUrQs'} />
       </div>
       <div className="flex flex-col items-center justify-center my-10 w-11/12 max-w-4xl" id='video2'>
         <h2 className="text-2xl font-bold mb-4 text-white">How to use MultiDST Python library</h2>

@@ -55,7 +55,7 @@ export default function Page() {
         </div>
         <div onClick={() => scrollToSection("docs")} className='flex-1'>
         <Thumbnail image={'/MultiDST_Documentation.png'} />
-          <h2>Software documentation</h2>
+          <h2>Other related documentation</h2>
         </div>
         </div>
       {/* </div> */}

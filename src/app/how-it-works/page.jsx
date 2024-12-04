@@ -38,41 +38,48 @@ export default function Page() {
       {/* <div> */}
       <div className='flex flex-col md:flex-row gap-4 items-center justify-between bg-slate-50 bg-opacity-10 p-10 mt-20 text-white w-full'>
         <div onClick={() => scrollToSection("video1")} className='flex-1'>
-          <Thumbnail image={'/gene.jpg'} />
-          <h2>Demo video title/description</h2>
+          <Thumbnail image={'/MultiDST_Python_Thumb.png'} />
+          <h2>How to use MultiDST website for simplified multiple testing</h2>
         </div>
         <div onClick={() => scrollToSection("video2")}  className='flex-1'>
-          <Thumbnail image={'/gene.jpg'} />
-          <h2>Demo video title/description</h2>
+          <Thumbnail image={'/MultiDST_Python_Thumb.png'} />
+          <h2>How to use MultiDST Python library</h2>
         </div>
         <div onClick={() => scrollToSection("video3")}  className='flex-1'>
-          <Thumbnail image={'/gene.jpg'} />
-          <h2>Demo video title/description</h2>
+          <Thumbnail image={'//MultiDST_Python_Thumb.png'} />
+          <h2>Example using genomic data</h2>
+        </div>
+        <div onClick={() => scrollToSection("video3")}  className='flex-1'>
+          <Thumbnail image={'//MultiDST_Python_Thumb.png'} />
+          <h2>Example using financial data</h2>
         </div>
         <div onClick={() => scrollToSection("docs")} className='flex-1'>
-          <h2>Doc section.. add image if needed, use the thunbnial component</h2>
+          <h2>Software documentation</h2>
         </div>
         </div>
       {/* </div> */}
 
       <div className="flex flex-col items-center justify-center my-10 w-11/12 max-w-4xl" id='video1'>
-        <h2 className="text-2xl font-bold mb-4 text-white">Daniel San</h2>
-        <EmbedVideo videoId={'wse9Ox0dtEs'} />
+        <h2 className="text-2xl font-bold mb-4 text-white">How to use MultiDST website for simplified multiple testing</h2>
+        <EmbedVideo videoId={'OLqbyn_jqZI'} />
       </div>
       <div className="flex flex-col items-center justify-center my-10 w-11/12 max-w-4xl" id='video2'>
-        <h2 className="text-2xl font-bold mb-4 text-white">Daniel San</h2>
-        <EmbedVideo videoId={'wse9Ox0dtEs'} />
+        <h2 className="text-2xl font-bold mb-4 text-white">How to use MultiDST Python library</h2>
+        <EmbedVideo videoId={'OLqbyn_jqZI'} />
       </div>
       <div className="flex flex-col items-center justify-center my-10 w-11/12 max-w-4xl" id='video3'>
-        <h2 className="text-2xl font-bold mb-4 text-white">Daniel San</h2>
-        <EmbedVideo videoId={'wse9Ox0dtEs'} />
+        <h2 className="text-2xl font-bold mb-4 text-white">Example using genomic data</h2>
+        <EmbedVideo videoId={'OLqbyn_jqZI'} />
+      </div>
+      <div className="flex flex-col items-center justify-center my-10 w-11/12 max-w-4xl" id='video3'>
+        <h2 className="text-2xl font-bold mb-4 text-white">Example using financial data</h2>
+        <EmbedVideo videoId={'OLqbyn_jqZI'} />
       </div>
       <div className="flex flex-col items-center bg-slate-50 rounded-md bg-opacity-10 justify-center my-10 w-11/12 max-w-4xl text-white p-4" id='docs'>
         <h2 className="text-2xl font-bold mb-4 ">Documentation Links</h2>
         <div className='flex flex-col w-full'>
-        <a href="http://" target='_blank'>Link 1</a>
-        <a href="http://" target='_blank'>Link 2</a>
-        <a href="http://" target='_blank'>Link 3</a>
+        <a href="https://pypi.org/project/multidst/" target='_blank'>Python Library: MultiDST v0.1.9</a>
+        <a href="https://multidst-docs-2.readthedocs.io/en/latest/" target='_blank'>MultiDST Documentation</a>
         </div>
       </div>
     </div>

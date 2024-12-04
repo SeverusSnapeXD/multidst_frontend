@@ -150,11 +150,11 @@ export default function Analysis() {
                             />
                             <div className="flex items-center justify-between gap-2">
 
-                            <Button label={'Load Sample Data Set 1'} 
+                            <Button label={'Load Sample Data: Genomic'} 
                             className="w-full mb-2 bg-transparent border border-1 border-white" 
                             onClick={() => loadSample("sample.csv")}
                             />
-                            <Button label={'Load Sample Data Set 2'} 
+                            <Button label={'Load Sample Data: Financial'} 
                             className="w-full mb-2 bg-transparent border border-1 border-white" 
                             onClick={() => loadSample("sample1.csv")}
                             />

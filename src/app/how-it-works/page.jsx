@@ -39,7 +39,7 @@ export default function Page() {
       <div className='flex flex-col md:flex-row gap-4 items-center justify-between bg-slate-50 bg-opacity-10 p-10 mt-20 text-white w-full'>
         <div onClick={() => scrollToSection("video1")} className='flex-1'>
           <Thumbnail image={'/MultiDST_Python_Thumb.png'} />
-          <h2>How to use MultiDST website</h2>
+          <h2>Why choose MultiDST?</h2>
         </div>
         <div onClick={() => scrollToSection("video2")}  className='flex-1'>
           <Thumbnail image={'/MultiDST_Python_Thumb.png'} />
@@ -70,11 +70,11 @@ export default function Page() {
       </div>
       <div className="flex flex-col items-center justify-center my-10 w-11/12 max-w-4xl" id='video3'>
         <h2 className="text-2xl font-bold mb-4 text-white">Example using genomic data</h2>
-        <EmbedVideo videoId={'OLqbyn_jqZI'} />
+        <EmbedVideo videoId={'UMfYeCbxDgI'} />
       </div>
       <div className="flex flex-col items-center justify-center my-10 w-11/12 max-w-4xl" id='video3'>
         <h2 className="text-2xl font-bold mb-4 text-white">Example using financial data</h2>
-        <EmbedVideo videoId={'OLqbyn_jqZI'} />
+        <EmbedVideo videoId={'UMfYeCbxDgI'} />
       </div>
       <div className="flex flex-col items-center bg-slate-50 rounded-md bg-opacity-10 justify-center my-10 w-11/12 max-w-4xl text-white p-4" id='docs'>
         <h2 className="text-2xl font-bold mb-4 ">Documentation Links</h2>

@@ -61,7 +61,7 @@ export default function Page() {
       {/* </div> */}
 
       <div className="flex flex-col items-center justify-center my-10 w-11/12 max-w-4xl" id='video1'>
-        <h2 className="text-2xl font-bold mb-4 text-white">How to use MultiDST website for simplified multiple testing</h2>
+        <h2 className="text-2xl font-bold mb-4 text-white">Why should you choose MultiDST?</h2>
         <EmbedVideo videoId={'ZIJMnMGUrQs'} />
       </div>
       <div className="flex flex-col items-center justify-center my-10 w-11/12 max-w-4xl" id='video2'>

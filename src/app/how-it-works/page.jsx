@@ -39,21 +39,22 @@ export default function Page() {
       <div className='flex flex-col md:flex-row gap-4 items-center justify-between bg-slate-50 bg-opacity-10 p-10 mt-20 text-white w-full'>
         <div onClick={() => scrollToSection("video1")} className='flex-1'>
           <Thumbnail image={'/MultiDST_Python_Thumb.png'} />
-          <h2>How to use MultiDST website for simplified multiple testing</h2>
+          <h2>How to use MultiDST website</h2>
         </div>
         <div onClick={() => scrollToSection("video2")}  className='flex-1'>
           <Thumbnail image={'/MultiDST_Python_Thumb.png'} />
           <h2>How to use MultiDST Python library</h2>
         </div>
         <div onClick={() => scrollToSection("video3")}  className='flex-1'>
-          <Thumbnail image={'//MultiDST_Python_Thumb.png'} />
+          <Thumbnail image={'/MultiDST_Python_Thumb.png'} />
           <h2>Example using genomic data</h2>
         </div>
         <div onClick={() => scrollToSection("video3")}  className='flex-1'>
-          <Thumbnail image={'//MultiDST_Python_Thumb.png'} />
+          <Thumbnail image={'/MultiDST_Python_Thumb.png'} />
           <h2>Example using financial data</h2>
         </div>
         <div onClick={() => scrollToSection("docs")} className='flex-1'>
+        <Thumbnail image={'/MultiDST_Documentation.png'} />
           <h2>Software documentation</h2>
         </div>
         </div>
